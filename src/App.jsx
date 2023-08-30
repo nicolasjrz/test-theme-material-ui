@@ -1,20 +1,13 @@
 import "./App.css";
-import { Grid, Typography } from "@mui/material";
+import { HomePage } from "./pages/HomePage";
+import { AppTheme } from "./ui/theme/AppTheme";
 
 function App() {
   return (
     <>
-      <Grid container>
-        <Grid item>
-          <Typography>Texto1</Typography>
-        </Grid>
-        <Grid item>
-          <Typography>Texto2</Typography>
-        </Grid>
-        <Grid item>
-          <Typography>Texto3</Typography>
-        </Grid>
-      </Grid>
+      <AppTheme>
+        <HomePage />
+      </AppTheme>
     </>
   );
 }
