@@ -1,19 +1,25 @@
-import { Grid, Typography } from "@mui/material";
+import { Grid, Typography, useTheme } from "@mui/material";
+import { LayloutPage } from "../ui/layout/LayloutPage";
 
 export const HomePage = () => {
+  const theme = useTheme(); // Obtén el tema actual
+
   return (
-    <>
-      <Grid container>
-        <Grid item>
+    <LayloutPage>
+      <Grid
+        container
+        style={{ backgroundColor: theme.palette.background2.default }}
+      >
+        <Grid item sm={4}>
           <Typography>Texto1</Typography>
         </Grid>
-        <Grid item>
+        <Grid item sm={4}>
           <Typography>Texto2</Typography>
         </Grid>
-        <Grid item>
+        <Grid item sm={4}>
           <Typography>Texto3</Typography>
         </Grid>
       </Grid>
-    </>
+    </LayloutPage>
   );
 };

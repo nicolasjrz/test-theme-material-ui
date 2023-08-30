@@ -1,12 +1,15 @@
 /* eslint-disable react/prop-types */
-import { ThemeProvider } from "@emotion/react";
-import { CssBaseline } from "@mui/material";
-import { theme } from "./theme";
+
+import { ThemeProvider, CssBaseline, createTheme } from "@mui/material";
+import { getDesignTokens } from "./getDesignTokens";
 
 export const AppTheme = ({ children }) => {
+  const mode = "dark"; //  "light"   Puedes cambiar esto según el modo que desees
+  const darkModeTheme = createTheme(getDesignTokens(mode));
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={darkModeTheme}>
       <CssBaseline />
+      {/* Aquí podrías añadir más elementos si es necesario */}
       {children}
     </ThemeProvider>
   );

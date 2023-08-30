@@ -6,6 +6,8 @@ function App() {
   return (
     <>
       <AppTheme>
+        {/* <AppRuoter/> */}
+        {/* aca iria el approter para que se implemente en todos los archivos */}
         <HomePage />
       </AppTheme>
     </>
