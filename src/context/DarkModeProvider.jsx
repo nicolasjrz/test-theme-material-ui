@@ -3,17 +3,28 @@ import { useState } from "react";
 import { DarkModeContext } from "./DarkModeContext";
 
 export const DarkModeProvider = ({ children }) => {
-  const [estado, setEstado] = useState("light");
+  const [darkModeState, setDarkModeState] = useState(false);
 
   const cambiarOscuro = () => {
-    setEstado("dark");
+    // Lógica para cambiar al tema oscuro
+    setDarkModeState(true);
   };
+
   const cambiarClaro = () => {
-    setEstado("light");
+    // Lógica para cambiar al tema claro
+    setDarkModeState(false);
+  };
+
+  const handleSwitchChange = () => {
+    if (darkModeState) {
+      cambiarClaro();
+    } else {
+      cambiarOscuro();
+    }
   };
 
   return (
-    <DarkModeContext.Provider value={{ estado, cambiarOscuro, cambiarClaro }}>
+    <DarkModeContext.Provider value={{ darkModeState, handleSwitchChange }}>
       {children}
     </DarkModeContext.Provider>
   );

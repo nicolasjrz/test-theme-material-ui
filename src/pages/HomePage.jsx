@@ -1,13 +1,13 @@
-import { Button, Grid, Typography, useTheme } from "@mui/material";
+import { FormControlLabel, Grid, Typography, useTheme } from "@mui/material";
 import { LayloutPage } from "../ui/layout/LayloutPage";
 import { useContext } from "react";
 import { DarkModeContext } from "../context/DarkModeContext";
 
+import { MaterialUISwitch } from "../components/MaterialUISwitch";
+
 export const HomePage = () => {
   const theme = useTheme(); // Obtén el tema actual
-  const { estado, cambiarOscuro, cambiarClaro } = useContext(DarkModeContext);
-
-  //   console.log({ estado });
+  const { darkModeState, handleSwitchChange } = useContext(DarkModeContext);
 
   return (
     <LayloutPage>
@@ -15,20 +15,26 @@ export const HomePage = () => {
         container
         style={{ backgroundColor: theme.palette.background2.default }}
       >
-        <Grid item sm={4}>
+        <Grid item sm={3}>
           <Typography>Texto1</Typography>
-          <Button variant="contained" onClick={cambiarOscuro}>
-            dark
-          </Button>
         </Grid>
-        <Grid item sm={4}>
+        <Grid item sm={3}>
           <Typography>Texto2</Typography>
-          <Button variant="contained" onClick={cambiarClaro}>
-            claro
-          </Button>
         </Grid>
-        <Grid item sm={4}>
+        <Grid item sm={3}>
           <Typography>Texto3</Typography>
+        </Grid>
+        <Grid item sm={3}>
+          <FormControlLabel
+            control={
+              <MaterialUISwitch
+                sx={{ m: 1 }}
+                checked={darkModeState}
+                onChange={handleSwitchChange}
+              />
+            }
+            // label="switch"
+          />
         </Grid>
       </Grid>
     </LayloutPage>

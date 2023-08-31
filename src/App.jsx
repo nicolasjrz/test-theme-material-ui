@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 import "./App.css";
 import { HomePage } from "./pages/HomePage";
 import { AppTheme } from "./ui/theme/AppTheme";
@@ -15,15 +15,10 @@ function App() {
   //   setIsDarkMode(prefersDarkMode);
   // }, []);
 
-  const { estado } = useContext(DarkModeContext);
-  console.log({ estado });
-
+  const { darkModeState } = useContext(DarkModeContext);
   return (
     <>
-      <AppTheme
-        // mode={estado ? "dark" : "light"}
-        mode={estado}
-      >
+      <AppTheme mode={darkModeState ? "dark" : "light"}>
         {/* <AppRuoter/> */}
         {/* aca iria el approter para que se implemente en todos los archivos */}
         <HomePage />
