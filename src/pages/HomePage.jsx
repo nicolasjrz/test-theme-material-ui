@@ -7,7 +7,7 @@ export const HomePage = () => {
   const theme = useTheme(); // Obtén el tema actual
   const { estado, cambiarOscuro, cambiarClaro } = useContext(DarkModeContext);
 
-  console.log({ estado });
+  //   console.log({ estado });
 
   return (
     <LayloutPage>
