@@ -9,7 +9,7 @@ export const HeaderNavbar = ({ isNavbarVisible, showNavbar }) => {
 
   return (
     <Box
-      p={1}
+      p={0.5}
       bgcolor={"transparent"}
       display={"flex"}
       justifyContent={"space-between"}
@@ -21,7 +21,7 @@ export const HeaderNavbar = ({ isNavbarVisible, showNavbar }) => {
         </Typography>
       </Box>
       <Box sx={{ display: "flex" }}>
-        <Box width={60} mr={1}>
+        <Box width={{ xs: 40, sm: 58 }} mr={1}>
           <FormControlLabel
             control={
               <MaterialUISwitch
@@ -41,7 +41,8 @@ export const HeaderNavbar = ({ isNavbarVisible, showNavbar }) => {
               opacity: isNavbarVisible ? 0 : 1,
               border: "none", // Eliminar el borde
               color: "#141414",
-              padding: "10px 20px",
+              // padding: "10px 20px",
+              paddingTop: 1.1,
               cursor: "pointer",
               "&:hover": {
                 color: "white",
@@ -50,7 +51,7 @@ export const HeaderNavbar = ({ isNavbarVisible, showNavbar }) => {
             }}
             onClick={showNavbar}
           >
-            <DensityMediumIcon />
+            <DensityMediumIcon sx={{ fontSize: 30 }} />
           </Button>
         </Box>
       </Box>

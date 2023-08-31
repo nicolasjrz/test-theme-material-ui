@@ -53,7 +53,7 @@ export const ModalNavbar = ({ navRef, isNavbarVisible, showNavbar }) => {
         }}
         onClick={showNavbar}
       >
-        <CloseIcon />
+        <CloseIcon sx={{ fontSize: 40 }} />
       </Button>
     </Box>
   );
