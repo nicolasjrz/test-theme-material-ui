@@ -6,7 +6,7 @@ export const getDesignTokens = (mode) => {
 
   // Define tus dos tipos de tipografía personalizados
   const typographyPrimary = {
-    fontFamily: "'Roboto', sans-serif",
+    fontFamily: "prueba1, 'Roboto', sans-serif", // Usa la fuente personalizada 'prueba1' y si no está disponible, usa 'Roboto'
     h1: {
       fontSize: "2rem",
       fontWeight: 600,
@@ -15,9 +15,9 @@ export const getDesignTokens = (mode) => {
   };
 
   const typographySecondary = {
-    fontFamily: "'Arial', sans-serif",
+    fontFamily: "prueba2, sans-serif", // Usa la fuente personalizada 'prueba2' y si no está disponible, usa 'Arial'
     h1: {
-      fontSize: "1.5rem",
+      fontSize: "2.5rem",
       fontWeight: 700,
     },
     // ... Otros estilos de tipografía para la tipografía secundaria

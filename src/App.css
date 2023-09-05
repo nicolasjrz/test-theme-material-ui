@@ -40,3 +40,14 @@
 .read-the-docs {
   color: #888;
 } */
+
+
+@font-face {
+  font-family: prueba1;
+  src: url(../src/assets/fonts/BebasNeue-Regular.ttf);
+}
+
+@font-face {
+  font-family: prueba2;
+  src: url(../src/assets/fonts/IndieFlower-Regular.ttf);
+}
