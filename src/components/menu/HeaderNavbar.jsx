@@ -9,7 +9,7 @@ export const HeaderNavbar = ({ isNavbarVisible, showNavbar }) => {
 
   return (
     <Box
-      p={0.5}
+      p={0.8}
       bgcolor={"transparent"}
       display={"flex"}
       justifyContent={"space-between"}

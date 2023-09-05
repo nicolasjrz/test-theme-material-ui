@@ -40,8 +40,8 @@ export const ModalNavbar = ({ navRef, isNavbarVisible, showNavbar }) => {
       <Button
         sx={{
           position: "absolute",
-          top: 15,
-          right: "2rem",
+          top: 8,
+          right: 1,
           border: "none", // Eliminar el borde
           color: "#f8f6f5",
           padding: "10px 20px",
