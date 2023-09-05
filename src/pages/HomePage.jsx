@@ -1,25 +1,37 @@
 import { Grid, Typography, useTheme } from "@mui/material";
-import { LayloutPage } from "../ui/layout/LayloutPage";
+import { LayoutPage } from "../ui/layout/LayoutPage";
 
 export const HomePage = () => {
   const theme = useTheme(); // Obtén el tema actual
 
   return (
-    <LayloutPage>
+    <LayoutPage>
       <Grid
+        spacing={1}
         container
         style={{ backgroundColor: theme.palette.background2.default }}
       >
         <Grid item sm={4}>
-          <Typography>Texto1</Typography>
+          <Typography
+            variant="h1" // Especifica el estilo de tipografía primaria
+            sx={{ fontFamily: theme.typography.primary.fontFamily }}
+          >
+            Texto1
+          </Typography>
         </Grid>
         <Grid item sm={4}>
-          <Typography>Texto2</Typography>
+          <Typography variant="body1">Texto2</Typography>{" "}
+          {/* Usando el estilo de tipografía predeterminado */}
         </Grid>
         <Grid item sm={4}>
-          <Typography>Texto3</Typography>
+          <Typography
+            variant="h2" // Especifica el estilo de tipografía secundaria
+            sx={{ fontFamily: theme.typography.secondary.fontFamily }}
+          >
+            Texto3
+          </Typography>
         </Grid>
       </Grid>
-    </LayloutPage>
+    </LayoutPage>
   );
 };

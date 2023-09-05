@@ -2,7 +2,7 @@
 import { Box } from "@mui/material";
 import { Navbar } from "../../components/menu/Navbar";
 
-export const LayloutPage = ({ children }) => {
+export const LayoutPage = ({ children }) => {
   return (
     <Box
     // sx={{ display: "flex" }}
