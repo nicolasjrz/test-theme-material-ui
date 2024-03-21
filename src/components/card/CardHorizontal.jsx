@@ -64,3 +64,4 @@ export const CardHorizontal = () => {
     </Box>
   );
 };
+
